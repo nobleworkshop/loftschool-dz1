@@ -1,0 +1,77 @@
+
+.aside_navigation {
+	
+}
+
+.aside_navigation_menu {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	margin-bottom: 35px;
+}
+
+
+
+.aside_navigation__menu__item {
+	border: 1px solid rgba(0, 0, 0, 0.2);
+	// width: 250px;
+	background-image: -moz-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -webkit-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	background-image: -ms-linear-gradient( 90deg, rgb(233,230,229) 0%, rgb(251,249,249) 94%, rgb(255,255,255) 100%);
+	box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.07), inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+
+	&:hover {
+		background-image: -moz-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+		background-image: -webkit-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+		background-image: -ms-linear-gradient( 90deg, rgb(194,192,192) 0%, rgb(227,225,225) 87%, rgb(230,228,228) 90%, rgb(232,231,231) 100%);
+		box-shadow: inset 0px -2px 3px 0px rgba(41, 41, 41, 0.05);
+	}
+
+	&.active {
+		background-image: -moz-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+		background-image: -webkit-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+		background-image: -ms-linear-gradient( 90deg, rgb(62,183,153) 0%, rgb(126,232,206) 100%);
+		box-shadow: 0px 2px 1px 0px rgba(9, 9, 9, 0.16), inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+		
+	}
+
+	&:first-child {
+		.border-radius(5px, 0px, 0, 5px);
+		-o-background-clip: unset;
+		   background-clip: unset;
+		
+	}
+
+
+	&:last-child {
+		.border-radius(0px, 5px, 5px, 0px);
+		-o-background-clip: unset;
+		   background-clip: unset;
+		
+		
+	}
+
+}
+
+
+
+.aside_navigation__menu__item__link {
+	font-size: 20px;
+	line-height: 22px;
+	color: #727070;
+	text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+	padding: 15px 27px;
+	display: block;
+	font-weight: 600;
+	text-decoration: none;
+	
+	&:hover {
+		text-decoration: none;
+	}
+
+	&.active {
+		color: #1e7465;
+  		text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.35);
+  		text-decoration: none;
+	}
+}

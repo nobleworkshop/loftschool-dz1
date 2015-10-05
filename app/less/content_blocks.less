@@ -1,0 +1,163 @@
+.content_block {
+    margin-bottom: 36px;
+}
+
+.content_block__header {
+    .border-radius(5px, 0px, 0, 5px);
+    -o-background-clip: unset;
+    background-clip: unset;
+    background-image: -moz-linear-gradient( 90deg, rgb(123, 120, 120) 0%, rgb(169, 168, 168) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(123, 120, 120) 0%, rgb(169, 168, 168) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(123, 120, 120) 0%, rgb(169, 168, 168) 100%);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.content_block__header__title {
+    font-size: 24px;
+    color: rgb(238, 237, 236);
+    text-shadow: 0px 1px 0px rgba(102, 101, 101, 1);
+    line-height: 0.917;
+    font-weight: 600;
+    padding: 15px 40px;
+    margin: 0;
+}
+
+.content_block__content {
+    .border-radius(0px, 5px, 5px, 0px);
+    -o-background-clip: unset;
+    background-clip: unset;
+    padding: 39px 44px;
+    background-image: -moz-linear-gradient( 90deg, rgb(240, 238, 237) 0%, rgb(247, 246, 245) 100%);
+    background-image: -webkit-linear-gradient( 90deg, rgb(240, 238, 237) 0%, rgb(247, 246, 245) 100%);
+    background-image: -ms-linear-gradient( 90deg, rgb(240, 238, 237) 0%, rgb(247, 246, 245) 100%);
+    // box-shadow: 0px 5px 10px 0px rgba(236, 232, 227, 0.75), inset 0px 6px 6px 0px rgba(255, 255, 255, 0.004);
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-top: none;
+    color: #727070;
+    font-size: 14px;
+}
+
+// PHOTO BLOCK
+.photo_block {
+    width: 188px;
+    height: auto;
+    text-align: left;
+    float: left;
+}
+
+.user_avatar {
+    display: inline-block;
+    overflow: hidden;
+    border: 1px solid #dcdbd9;
+    border-radius: 50%;
+    vertical-align: top;
+}
+
+.user_avatar_img {
+    border-radius: 50%;
+    max-width: 153px;
+    border: 10px solid #F6F4F3;
+}
+
+// ABOUT ME TEXT
+.about_me_text {
+    margin-left: 188px;
+    p {
+        margin-bottom: 10px;
+    }
+    b {
+        font-weight: 600;
+    }
+}
+
+.skills {
+    display: inline-block;
+}
+
+.skills_tags {
+    display: inline-block;
+}
+
+.skills_tags_list {
+    margin: 0;
+    padding: 0;
+}
+
+.skills_tags_element {
+    display: inline-block;
+    margin-right: 9px;
+    font-size: 9px;
+    font-weight: 600;
+    color: #1e7465;
+    text-align: left;
+    text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.45);
+    text-transform: uppercase;
+    padding-left: 13px;
+    line-height: 20px;
+    padding-right: 2px;
+    .sprite;
+    .sprite-tag_bg;
+    display: inline-block;
+    width: auto;
+    position: relative;
+    &:after {
+        .sprite;
+        .sprite-tag_bg;
+        display: block;
+        width: 5px;
+        content: "";
+        background-position: -2544px -25px;
+        position: absolute;
+        top: 0;
+        right: -5px;
+    }
+} //.skills_tags_element
+.expirience_list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.expirience_list_item {
+    // margin-bottom: 20px;
+    padding-bottom: 20px;
+    padding-left: 97px;
+    margin-top: 20px;
+    padding-top: 25px;
+    border-top: 1px solid #DBDBDA;
+    
+   
+    
+    &.bg_case {
+    	.bg-image ( transparent, url('../img/exp_bg_case.png'), no-repeat, 0px, 20px);
+    }
+
+    &.bg_pen {
+    	.bg-image ( transparent, url('../img/exp_bg_school.png'), no-repeat, 0px, 20px);
+    }
+
+    &.bg_hat {
+    	.bg-image ( transparent, url('../img/exp_bg_graguete.png'), no-repeat, 0px, 20px);
+    }
+
+    &.bg_doc {
+    	.bg-image ( transparent, url('../img/exp_bg_diploma.png'), no-repeat, 0px, 20px);
+    }
+
+    &.bg_pic {
+    	.bg-image ( transparent, url('../img/exp_bg_pic.png'), no-repeat, 0px, 20px);
+    }
+
+    &:first-child {
+        border-top: none;
+        margin-top: 0;
+        padding-top: 5px;
+        background-position: 0px 0px;
+    }
+
+    .place {
+        font-weight: 600;
+    }
+    .period {}
+}
