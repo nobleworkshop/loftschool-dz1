@@ -1,0 +1,45 @@
+.feedback_form {
+    width: 404px;
+    margin: 0 auto;
+    form {
+        margin: 0;
+        padding: 0;
+    }
+    .form_block {
+        margin-bottom: 17px;
+        label {
+            font-size: 14px;
+            color: #727070;
+            display: block;
+            padding: 5px 0px;
+        }
+        input {
+            display: block;
+            width: 100%;
+            background-image: -moz-linear-gradient( 90deg, rgb(233, 231, 231) 0%, rgba(251, 249, 249, 0) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(233, 231, 231) 0%, rgba(251, 249, 249, 0) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(233, 231, 231) 0%, rgba(251, 249, 249, 0) 100%);
+            box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004);
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            padding: 14px 8px;
+            font-size: 12px;
+            color: #8a8a8a;
+            -webkit-border-radius: 3px;
+            border-radius: 3px;
+            border: 1px solid #D6D5D3;
+        }
+        &.name {
+            margin-right: 20px;
+            width: (404-20)/2px;
+            float: left;
+        }
+        &.email {
+            width: (404-20)/2px;
+            float: left;
+        }
+        &.message {}
+        &.captcha {}
+        &.buttons {}
+    }
+}

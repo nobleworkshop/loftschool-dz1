@@ -8,7 +8,7 @@
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <!-- Titles -->
-    <title>Персональная страница</title>
+    <title>Обратная связь – Персональная страница</title>
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
@@ -60,18 +60,18 @@
             <div class="sidebar_column clearfix">
                 <nav class="aside_navigation">
                     <ul class="aside_navigation_menu">
-                        <li class="aside_navigation__menu__item active">
-                            <a href="#" class="aside_navigation__menu__item__link active">
+                        <li class="aside_navigation__menu__item">
+                            <a href="index.html" class="aside_navigation__menu__item__link">
 	    								Обо мне
 	    							</a>
                         </li>
-                        <li class="aside_navigation__menu__item">
-                            <a href="portfolio.html" class="aside_navigation__menu__item__link">
+                        <li class="aside_navigation__menu__item ">
+                            <a href="portfolio.html" class="aside_navigation__menu__item__link ">
 	    								Мои Работы
 	    							</a>
                         </li>
-                        <li class="aside_navigation__menu__item">
-                            <a href="#" class="aside_navigation__menu__item__link">
+                        <li class="aside_navigation__menu__item active">
+                            <a href="feedback.html" class="aside_navigation__menu__item__link active">
 	    								Обратная связь
 	    							</a>
                         </li>
@@ -89,80 +89,46 @@
             <!-- ....... // SIDEBAR CONTENT ....... -->
             <!-- ....... MAIN CONTENT ....... -->
             <main class="content_column clearfix">
-                <!-- Section - Main info -->
-                <section class="content_block">
-                    <div class="content_block__header">
-                        <h1 class="content_block__header__title">Основная информация</h1>
-                    </div>
-                    <div class="content_block__content clearfix">
-                        <div class="photo_block">
-                            <div class="user_avatar">
-                                <img src="img/foto.jpg" height="300" width="300" alt="Фотография" class="user_avatar_img">
-                            </div>
-                        </div>
-                        <div class="about_me_text">
-                            <p><b>Меня зовут:</b> Харин Юрий Анатольевич</p>
-                            <p><b>Мой возраст:</b> 29 лет</p>
-                            <p><b>Мой город:</b> Тбилиси, Грузия</p>
-                            <p><b>Моя специализация:</b> веб-дизайн, html/css</p>
-                            <div class="skills"><b>Ключевые навыки:</b></div>
-                            <div class="skills_tags">
-                                <ul class="skills_tags_list">
-                                    <li class="skills_tags_element">Photoshop</li>
-                                    <li class="skills_tags_element">HTML</li>
-                                    <li class="skills_tags_element">CSS</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- // Section - Main info -->
-                <!-- Section - Expirience -->
-                <section class="content_block">
-                    <div class="content_block__header">
-                        <h1 class="content_block__header__title">Опыт работы</h1>
-                    </div>
-                    <div class="content_block__content clearfix">
-                        <ul class="expirience_list">
-                            <li class="expirience_list_item bg_case">
-                                <div class="place">"ИП Боровицкий" - Продавец дисков</div>
-                                <div class="period">Сентябрь 2005 - Август 2008</div>
-                            </li>
-                            <li class="expirience_list_item bg_case">
-                                <div class="place">"ИП Боровицкий" - Продавец дисков</div>
-                                <div class="period">Сентябрь 2005 - Август 2008</div>
-                            </li>
-                            <li class="expirience_list_item bg_case">
-                                <div class="place">"ИП Боровицкий" - Продавец дисков</div>
-                                <div class="period">Сентябрь 2005 - Август 2008</div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- // Section - Expirience -->
-                <!-- Section - Education -->
-                <section class="content_block">
-                    <div class="content_block__header">
-                        <h1 class="content_block__header__title">Образование</h1>
-                    </div>
-                    <div class="content_block__content clearfix">
-                        <ul class="expirience_list">
-                            <li class="expirience_list_item bg_pen">
-                                <div class="place">"ИП Боровицкий" - Продавец дисков</div>
-                                <div class="period">Сентябрь 2005 - Август 2008</div>
-                            </li>
-                            <li class="expirience_list_item bg_hat">
-                                <div class="place">"ИП Боровицкий" - Продавец дисков</div>
-                                <div class="period">Сентябрь 2005 - Август 2008</div>
-                            </li>
-                            <li class="expirience_list_item bg_doc">
-                                <div class="place">"ИП Боровицкий" - Продавец дисков</div>
-                                <div class="period">Сентябрь 2005 - Август 2008</div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- // Section - Education -->
+
+
+            
+<!-- Section - Feedback -->
+<section class="content_block">
+    <div class="content_block__header">
+        <h1 class="content_block__header__title feedback">У вас интересный проект? Напишите мне</h1>
+    </div>
+    <div class="content_block__content clearfix">
+        <div class="feedback_form clearfix">
+            <form action="">
+                <div class="form_block name">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" name="name" placeholder="Как к Вам обращаться">
+                </div>
+                <div class="form_block email clearfix">
+                    <label for="email">Имя:</label>
+                    <input type="email" id="email" name="email" placeholder="Куда мне писать">
+                </div>
+                <div class="form_block message clearfix">
+                    <label for="message">Сообщение:</label>
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Кратко в чем суть"></textarea>
+                </div>
+                <div class="form_block captcha">
+                    <label for="message">Введите код, указанный на картинке</label>
+                    <div class="captcha_block"><img src="img/capthca_img.png" height="67" width="174" alt="Captcha"></div>
+                    <input type="text" id="email" name="email" placeholder="Введите код">
+                </div>
+                <div class="form_block buttons">
+                    <input type="submit" value="Отправить">
+                    <input type="reset" value="Очистить">
+                </div>
+            </form>
+        </div>
+    </div>
+</section>
+<!-- // Section - Feedback -->
+
+               
+               
             </main>
             <!-- ....... // MAIN CONTENT ....... -->
         </div>

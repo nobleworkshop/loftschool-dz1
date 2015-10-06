@@ -8,8 +8,19 @@ html, body {
 	line-height: 1.4;
 	font-size: @mainfontsize;
 	font-family: @mainfont;
-	.bg-image ( transparent, url('../img/page_bg.jpg'), repeat, 0px, 0px);
-	.cover;
+	cursor: default;
+	
+
+	
+}
+
+
+
+.page-wrap {
+	.bg-image ( transparent, url('../img/page_bg.jpg'), no-repeat, 0px, 0px);
+	-webkit-background-size: cover;
+	     -o-background-size: cover;
+	        background-size: cover;
 }
 
 a { color: @linkcolor; text-decoration: underline; outline: none;}
