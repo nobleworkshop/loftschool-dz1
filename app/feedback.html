@@ -91,7 +91,7 @@
             <main class="content_column clearfix">
 
 
-            
+
 <!-- Section - Feedback -->
 <section class="content_block">
     <div class="content_block__header">
@@ -112,14 +112,22 @@
                     <label for="message">Сообщение:</label>
                     <textarea name="message" id="message" cols="30" rows="10" placeholder="Кратко в чем суть"></textarea>
                 </div>
-                <div class="form_block captcha">
-                    <label for="message">Введите код, указанный на картинке</label>
-                    <div class="captcha_block"><img src="img/capthca_img.png" height="67" width="174" alt="Captcha"></div>
-                    <input type="text" id="email" name="email" placeholder="Введите код">
+                <div class="form_block captcha clearfix">
+                    <label for="captcha">Введите код, указанный на картинке</label>
+                    
+                    <div class="grid50_1">
+                        <div class="captcha_block"><img src="img/capthca_img.png" height="67" width="174" alt="Captcha"></div>
+                    </div>
+                    <div class="grid50_2">
+                        <input type="text" id="captcha" name="email" class="clearfix" placeholder="Введите код">  
+                    </div>
+
                 </div>
-                <div class="form_block buttons">
-                    <input type="submit" value="Отправить">
-                    <input type="reset" value="Очистить">
+                <div class="form_block button_send">
+                    <input type="submit" value="Отправить" class="btn btn_good btn_width_121">
+                </div>
+                <div class="form_block button_clear clearfix">
+                    <input type="reset" value="Очистить" class="btn btn_default btn_width_121">
                 </div>
             </form>
         </div>

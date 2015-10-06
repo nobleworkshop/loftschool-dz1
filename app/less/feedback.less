@@ -12,8 +12,10 @@
             color: #727070;
             display: block;
             padding: 5px 0px;
+            cursor: pointer;
         }
-        input {
+        input,
+        textarea {
             display: block;
             width: 100%;
             background-image: -moz-linear-gradient( 90deg, rgb(233, 231, 231) 0%, rgba(251, 249, 249, 0) 100%);
@@ -22,7 +24,7 @@
             box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004);
             -webkit-border-radius: 3px;
             border-radius: 3px;
-            padding: 14px 8px;
+            padding: 12px 8px;
             font-size: 12px;
             color: #8a8a8a;
             -webkit-border-radius: 3px;
@@ -39,7 +41,98 @@
             float: left;
         }
         &.message {}
-        &.captcha {}
+       
+        &.captcha { margin-bottom: 33px;}
         &.buttons {}
-    }
-}
+        &.button_send {
+        	width: 50%;
+        	float: left;
+        }
+        &.button_clear {
+        	width: 50%;
+        	float: left;
+        }
+
+
+        .grid50_1 {
+        	width: (404-20)/2px;
+        	margin-right: 20px;
+        	float: left;
+        	.clearfix;
+        	
+        }
+
+        .grid50_2 {
+        	width: (404-20)/2px;
+        	float: left;
+        	.clearfix;
+        	
+        }
+
+        .captcha_block {
+        	border: 1px solid #D6D5D3;
+        	background-color: #fff;
+        	width: 191px;
+        	float: left;
+        	margin-right: 20px;
+        	display: inline-block;
+
+        	
+        	  border-radius: 4px;
+        	
+        	  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004);
+     
+        
+
+        }
+
+        #captcha {
+        	display: inline-block;
+        	vertical-align: middle;
+        	float: left;
+        	padding-top: 8px;
+        	padding-bottom: 8px;
+        }
+
+        .btn {
+            text-align: center;
+            font-size: 14px;
+            line-height: 22px;
+            padding: 10px 25px;
+            font-weight: 600;
+            border-radius: 5px;
+            width: auto;
+        }
+        .btn_good {
+            color: #1E7465;
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+            background-image: -moz-linear-gradient( 90deg, rgb(67, 183, 150) 0%, rgb(128, 232, 203) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(67, 183, 150) 0%, rgb(128, 232, 203) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(67, 183, 150) 0%, rgb(128, 232, 203) 100%);
+            border: 1px solid #40a88b;
+            &:hover {
+                background-image: -moz-linear-gradient( 90deg, rgb(58, 160, 135) 0%, rgb(95, 220, 189) 100%);
+                background-image: -webkit-linear-gradient( 90deg, rgb(58, 160, 135) 0%, rgb(95, 220, 189) 100%);
+                background-image: -ms-linear-gradient( 90deg, rgb(58, 160, 135) 0%, rgb(95, 220, 189) 100%);
+            } //&:hover
+        } //.btn_good
+        .btn_default {
+            color: rgb(114, 112, 112);
+            text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+            background-image: -moz-linear-gradient( 90deg, rgb(233, 230, 228) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);
+            background-image: -webkit-linear-gradient( 90deg, rgb(233, 230, 228) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);
+            background-image: -ms-linear-gradient( 90deg, rgb(233, 230, 228) 0%, rgb(251, 249, 249) 94%, rgb(255, 255, 255) 100%);
+            border: 1px solid #b6b6b6;
+            &:hover {
+                background-image: -moz-linear-gradient( 90deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 87%, rgb(230, 228, 228) 90%, rgb(232, 231, 231) 100%);
+                background-image: -webkit-linear-gradient( 90deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 87%, rgb(230, 228, 228) 90%, rgb(232, 231, 231) 100%);
+                background-image: -ms-linear-gradient( 90deg, rgb(194, 192, 192) 0%, rgb(227, 225, 225) 87%, rgb(230, 228, 228) 90%, rgb(232, 231, 231) 100%);
+            }
+        } //.btn_default
+        
+        .btn_width_121 {
+        	width: 121px;
+        	margin: 0 auto;
+        }
+    }//.form_block
+}//.feedback_form
