@@ -130,7 +130,7 @@
 
 
                             <div class="work_item add_work_item">
-                               <a href="#" class="add_project">
+                               <a href="#" id="add_new_item" class="add_project">
                                     <i></i>
                                    Добавить проект
                                </a>
@@ -167,21 +167,32 @@
 
     <!-- ........................ LOGIN CONTAINER ......................... -->
     <div class="modal_fade"></div>
-    <div class="login_container modal_add_work_holder clearfix">
+    <div class="login_container modal_add_work_holder clearfix" id="add_new_project_popup">
 
         <!-- Login Plate -->
         <div class="login_title">Добавление проекта</div>
         <div class="login_plate">
+        <form class="form" action="">
 
-        <label for=""></label>
+            <label for="project_title">Название проекта
+            <input type="text" id="project_title" placeholder="Введите название">
+            </label>
 
-            <label class="login_label"><input type="text" class="login_input" placeholder="Введите Email"></label>
-            <label class="pass_label"><input type="password" class="login_pass" placeholder="Введите пароль"></label>
-            <label for="remember">
-            <input type="checkbox" class="remember" id="remember">
-            Запомнить меня?</label>
-            <input type="submit" class="btn btn_good" value="Войти">
-            
+            <label for="project_img">Картинка проекта</label>
+            <input type="file" id="project_img" placeholder="Загрузите изображение">
+
+            <label for="project_url">URL проекта</label>
+            <input type="text" id="project_url" placeholder="Добавьте ссылку">
+
+            <label for="project_description">Описание</label>
+            <textarea type="text" id="project_description" placeholder="Пара слов о Вашем проекте"></textarea>
+
+                <!-- <label class="login_label"><input type="text" class="login_input" placeholder="Введите Email"></label> -->
+                <!-- <label class="pass_label"><input type="password" class="login_pass" placeholder="Введите пароль"></label> -->
+         
+            <input type="submit" class="btn btn_good block_center" value="Добавить">
+       
+        </form>
         </div>
         <!-- // Login Plate -->
 
@@ -200,6 +211,7 @@
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
     <script src="bower/jquery/dist/jquery.min.js"></script>
+    <script src="bower/bPopup/jquery.bpopup.min.js"></script>
     <script src="js/main.js"></script>
 </body>
 
