@@ -1313,6 +1313,52 @@ body {
   width: 650px;
   float: left;
 }
+.login_container {
+  width: 332px;
+  height: auto;
+  margin: -25px auto 0;
+}
+.content_table {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+.content_cell {
+  display: table-cell;
+  width: 100%;
+  height: 100%;
+  vertical-align: middle;
+  text-align: center;
+}
+.page_bg {
+  background-color: transparent;
+  background-image: url("../img/page_bg.jpg");
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.modal_add_work_holder {
+  width: 365px;
+  position: absolute;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  margin-left: -182px;
+  -webkit-transform: translate(0%, -50%);
+  -moz-transform: translate(0%, -50%);
+  -ms-transform: translate(0%, -50%);
+  -o-transform: translate(0%, -50%);
+  transform: translate(0%, -50%);
+}
+.modal_fade {
+  background-color: rgba(114, 112, 112, 0.72);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: block;
+  top: 0;
+  left: 0;
+}
 .aside_navigation_menu {
   list-style-type: none;
   margin: 0;
@@ -2605,6 +2651,9 @@ body {
   width: 23px;
   height: 21px;
 }
+.modal_add_work_holder .login_title {
+  color: #FFF;
+}
 .feedback_form {
   width: 404px;
   margin: 0 auto;
@@ -2724,4 +2773,402 @@ body {
 .feedback_form .form_block .btn_width_121 {
   width: 121px;
   margin: 0 auto;
+}
+.login_title {
+  font-size: 12px;
+  color: #727070;
+  line-height: 1.2;
+  text-align: left;
+  padding-left: 20px;
+  margin-bottom: 5px;
+}
+.login_plate {
+  -webkit-border-top-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  -moz-border-radius-bottomright: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  -o-background-clip: unset;
+  background-clip: unset;
+  padding: 39px 44px;
+  background-image: -moz-linear-gradient(90deg, #f0eeed 0%, #f7f6f5 100%);
+  background-image: -webkit-linear-gradient(90deg, #f0eeed 0%, #f7f6f5 100%);
+  background-image: -ms-linear-gradient(90deg, #f0eeed 0%, #f7f6f5 100%);
+  box-shadow: 0px 11px 27px 0px rgba(159, 159, 159, 0.75), inset 0px 6px 6px 0px rgba(255, 255, 255, 0.004);
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-top: none;
+  color: #727070;
+  font-size: 14px;
+}
+.login_plate input[type="text"],
+.login_plate input[type="password"] {
+  display: block;
+  width: 100%;
+  background-image: -moz-linear-gradient(90deg, #e9e7e7 0%, rgba(251, 249, 249, 0) 100%);
+  background-image: -webkit-linear-gradient(90deg, #e9e7e7 0%, rgba(251, 249, 249, 0) 100%);
+  background-image: -ms-linear-gradient(90deg, #e9e7e7 0%, rgba(251, 249, 249, 0) 100%);
+  box-shadow: 0px 1px 0px 0px rgba(255, 255, 255, 0.004);
+  padding: 11px 8px;
+  font-size: 12px;
+  color: #8a8a8a;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #D6D5D3;
+  position: relative;
+  padding-left: 72px;
+}
+.login_plate .login_label {
+  position: relative;
+  display: block;
+  margin-bottom: 24px;
+}
+.login_plate .login_label:before {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  top: 1;
+  width: 54px;
+  height: 39px;
+  z-index: 9;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+  background-position: -1746px -25px;
+  width: 40px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-_heckbox_on {
+  background-position: -25px -25px;
+  width: 21px;
+  height: 21px;
+}
+.login_plate .login_label:before.sprite-bg_email_left {
+  background-position: -96px -25px;
+  width: 39px;
+  height: 38px;
+}
+.login_plate .login_label:before.sprite-bg_form_cloud {
+  background-position: -185px -25px;
+  width: 54px;
+  height: 45px;
+}
+.login_plate .login_label:before.sprite-bg_phone_left {
+  background-position: -289px -25px;
+  width: 40px;
+  height: 38px;
+}
+.login_plate .login_label:before.sprite-bg_skype_left {
+  background-position: -379px -25px;
+  width: 40px;
+  height: 38px;
+}
+.login_plate .login_label:before.sprite-case {
+  background-position: -469px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .login_label:before.sprite-checkbox_off {
+  background-position: -573px -25px;
+  width: 21px;
+  height: 21px;
+}
+.login_plate .login_label:before.sprite-close_red {
+  background-position: -644px -25px;
+  width: 12px;
+  height: 12px;
+}
+.login_plate .login_label:before.sprite-cross_green {
+  background-position: -706px -25px;
+  width: 12px;
+  height: 12px;
+}
+.login_plate .login_label:before.sprite-diploma {
+  background-position: -768px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .login_label:before.sprite-graguete {
+  background-position: -872px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .login_label:before.sprite-icon_email_orange {
+  background-position: -976px -25px;
+  width: 16px;
+  height: 12px;
+}
+.login_plate .login_label:before.sprite-icon_facebook {
+  background-position: -1042px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-icon_facebook_on {
+  background-position: -1130px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-icon_github {
+  background-position: -1218px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-icon_github_on {
+  background-position: -1306px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-icon_twitter {
+  background-position: -1394px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-icon_twitter_on {
+  background-position: -1482px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-icon_vk {
+  background-position: -1570px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-icon_vk_on {
+  background-position: -1658px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-input_email_bg {
+  background-position: -1746px -25px;
+  width: 40px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-input_pass_bg {
+  background-position: -1836px -25px;
+  width: 40px;
+  height: 40px;
+}
+.login_plate .login_label:before.sprite-locked {
+  background-position: -1926px -25px;
+  width: 18px;
+  height: 21px;
+}
+.login_plate .login_label:before.sprite-pic {
+  background-position: -1994px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .login_label:before.sprite-school {
+  background-position: -2098px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .login_label:before.sprite-tag_bg {
+  background-position: -2202px -25px;
+  width: 347px;
+  height: 21px;
+}
+.login_plate .login_label:before.sprite-unlocked {
+  background-position: -2599px -25px;
+  width: 23px;
+  height: 21px;
+}
+.login_plate .pass_label {
+  position: relative;
+  display: block;
+  margin-bottom: 19px;
+}
+.login_plate .pass_label:before {
+  content: " ";
+  position: absolute;
+  left: 15px;
+  top: 1;
+  width: 54px;
+  height: 39px;
+  z-index: 9;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+  background-position: -1836px -25px;
+  width: 40px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-_heckbox_on {
+  background-position: -25px -25px;
+  width: 21px;
+  height: 21px;
+}
+.login_plate .pass_label:before.sprite-bg_email_left {
+  background-position: -96px -25px;
+  width: 39px;
+  height: 38px;
+}
+.login_plate .pass_label:before.sprite-bg_form_cloud {
+  background-position: -185px -25px;
+  width: 54px;
+  height: 45px;
+}
+.login_plate .pass_label:before.sprite-bg_phone_left {
+  background-position: -289px -25px;
+  width: 40px;
+  height: 38px;
+}
+.login_plate .pass_label:before.sprite-bg_skype_left {
+  background-position: -379px -25px;
+  width: 40px;
+  height: 38px;
+}
+.login_plate .pass_label:before.sprite-case {
+  background-position: -469px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .pass_label:before.sprite-checkbox_off {
+  background-position: -573px -25px;
+  width: 21px;
+  height: 21px;
+}
+.login_plate .pass_label:before.sprite-close_red {
+  background-position: -644px -25px;
+  width: 12px;
+  height: 12px;
+}
+.login_plate .pass_label:before.sprite-cross_green {
+  background-position: -706px -25px;
+  width: 12px;
+  height: 12px;
+}
+.login_plate .pass_label:before.sprite-diploma {
+  background-position: -768px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .pass_label:before.sprite-graguete {
+  background-position: -872px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .pass_label:before.sprite-icon_email_orange {
+  background-position: -976px -25px;
+  width: 16px;
+  height: 12px;
+}
+.login_plate .pass_label:before.sprite-icon_facebook {
+  background-position: -1042px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-icon_facebook_on {
+  background-position: -1130px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-icon_github {
+  background-position: -1218px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-icon_github_on {
+  background-position: -1306px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-icon_twitter {
+  background-position: -1394px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-icon_twitter_on {
+  background-position: -1482px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-icon_vk {
+  background-position: -1570px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-icon_vk_on {
+  background-position: -1658px -25px;
+  width: 38px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-input_email_bg {
+  background-position: -1746px -25px;
+  width: 40px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-input_pass_bg {
+  background-position: -1836px -25px;
+  width: 40px;
+  height: 40px;
+}
+.login_plate .pass_label:before.sprite-locked {
+  background-position: -1926px -25px;
+  width: 18px;
+  height: 21px;
+}
+.login_plate .pass_label:before.sprite-pic {
+  background-position: -1994px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .pass_label:before.sprite-school {
+  background-position: -2098px -25px;
+  width: 54px;
+  height: 55px;
+}
+.login_plate .pass_label:before.sprite-tag_bg {
+  background-position: -2202px -25px;
+  width: 347px;
+  height: 21px;
+}
+.login_plate .pass_label:before.sprite-unlocked {
+  background-position: -2599px -25px;
+  width: 23px;
+  height: 21px;
+}
+.login_plate input[type="checkbox"] {
+  float: left;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: baseline;
+  margin-top: 4px;
+}
+.login_plate label[for="remember"] {
+  float: left;
+  display: inline-block;
+  vertical-align: middle;
+  margin-bottom: 20px;
+}
+.login_plate .btn {
+  text-align: center;
+  font-size: 14px;
+  line-height: 22px;
+  padding: 6px 50px;
+  font-weight: 600;
+  border-radius: 5px;
+  width: auto;
+}
+.login_plate .btn_good {
+  color: #1E7465;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.75);
+  background-image: -moz-linear-gradient(90deg, #43b796 0%, #80e8cb 100%);
+  background-image: -webkit-linear-gradient(90deg, #43b796 0%, #80e8cb 100%);
+  background-image: -ms-linear-gradient(90deg, #43b796 0%, #80e8cb 100%);
+  border: 1px solid #40a88b;
+}
+.login_plate .btn_good:hover {
+  background-image: -moz-linear-gradient(90deg, #3aa087 0%, #5fdcbd 100%);
+  background-image: -webkit-linear-gradient(90deg, #3aa087 0%, #5fdcbd 100%);
+  background-image: -ms-linear-gradient(90deg, #3aa087 0%, #5fdcbd 100%);
 }
