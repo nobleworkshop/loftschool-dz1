@@ -17,7 +17,16 @@
             e.preventDefault();
 
             // Triggering bPopup when click event is fired
-            $('#add_new_project_popup').bPopup();
+            $('#add_new_project_popup').bPopup({
+				    		speed: 650,
+				    		transition: 'slideDown',
+				    		closeClass: 'close-popup',
+				    		onCLose: function () {
+				    			this.find('.form')
+				    				.trigger("reset");
+				    		}
+				    		
+				    	});
 
         });
 

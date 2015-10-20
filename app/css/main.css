@@ -331,13 +331,15 @@ a {
   margin: 0 auto;
 }
 .logo {
-  text-indent: -9999px;
   padding-top: 10px;
   padding-bottom: 16px;
   float: left;
 }
 .logo_h1 {
   margin: 0;
+  text-indent: -9999px;
+  float: left;
+  margin-left: -99999px;
 }
 .social_links_place {
   float: right;
@@ -347,6 +349,17 @@ a {
 .social_links_wraper {
   text-align: right;
   margin-right: -15px;
+}
+.social_links_wraper ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  font-size: 0;
+}
+.social_links_wraper ul li {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
 }
 .social_link {
   display: inline-block !important;
@@ -1343,7 +1356,6 @@ body {
   height: auto;
   top: 50%;
   left: 50%;
-  margin-left: -182px;
   display: none;
 }
 .modal_fade {
@@ -2068,6 +2080,19 @@ body {
 .about_me_text b {
   font-weight: 600;
 }
+.about_me_text_ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+.about_me_text_list {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 10px;
+}
+.about_me_text__span--bold {
+  font-weight: 600;
+}
 .skills {
   display: inline-block;
 }
@@ -2687,6 +2712,18 @@ body {
   height: 109px;
   padding-left: 10px;
   margin-bottom: 10px;
+}
+.modal_close {
+  background-color: transparent;
+  background-image: url('../img/add_work_close.png');
+  background-repeat: repeat;
+  background-position: 0px 0px;
+  width: 14px;
+  height: 14px;
+  display: block;
+  float: right;
+  text-indent: -99999px;
+  cursor: pointer;
 }
 .feedback_form {
   width: 404px;
