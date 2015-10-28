@@ -176,20 +176,20 @@
         <div class="login_plate">
         <a class="close-popup modal_close">Закрыть попап</a>
 
-        <form class="form clearfix" action="">
+        <form class="form clearfix" id="add_new_project" action="">
 
             <label for="project_title">Название проекта
-            <input type="text" id="project_title" placeholder="Введите название">
+            <input type="text" id="project_title" name="projectName" placeholder="Введите название">
             </label>
 
             <label for="project_img">Картинка проекта</label>
-            <input type="file" id="project_img" placeholder="Загрузите изображение">
+            <input type="file" id="project_img" name="fileurl" placeholder="Загрузите изображение">
 
             <label for="project_url">URL проекта</label>
-            <input type="text" id="project_url" placeholder="Добавьте ссылку">
+            <input type="text" id="project_url" name="projectUrl" placeholder="Добавьте ссылку">
 
             <label for="project_description">Описание</label>
-            <textarea type="text" id="project_description" placeholder="Пара слов о Вашем проекте"></textarea>
+            <textarea type="text" id="project_description" name="text" placeholder="Пара слов о Вашем проекте"></textarea>
 
                 <!-- <label class="login_label"><input type="text" class="login_input" placeholder="Введите Email"></label> -->
                 <!-- <label class="pass_label"><input type="password" class="login_pass" placeholder="Введите пароль"></label> -->
