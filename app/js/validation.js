@@ -8,7 +8,9 @@ var validation = (function () {
 	// Listen to doing
 	var _setUpListeners = function () {
 		$('form').on('keydown', '.has-error', _removeError);
-		$('form').on('reset', _clearForm);
+		// $('form').on('reset', _clearForm);
+		$('form input[type="reset"]').on('click', _clearForm);
+
 	};
 
 
