@@ -30,6 +30,7 @@ var myModule = (function (){
                             closeClass: 'close-popup',
                             onClose: function () {
                                 form.find('.server-mes').text('').hide();
+                                form.trigger("reset");
                             }
                             
                         });
@@ -43,22 +44,25 @@ var myModule = (function (){
                 // Объявляем переменные
                 var form = $(this),
                     url = 'add_project.php',
-                    myServerGiveMeAnAnswer = _ajaxForm(form, url);
+                    defObj = _ajaxForm(form, url);
 
-                myServerGiveMeAnAnswer.done(function(ans) {
-                    
+                    if (defObj){
+                            defObj.done(function(ans) {
 
-                    var successBox = form.find('.success-mes'),
-                        errorBox = form.find('.error-mes');
+                                var successBox = form.find('.success-mes'),
+                                    errorBox = form.find('.error-mes');
 
-                    if(ans.status === 'OK'){
-                            errorBox.hide();
-                            form.find('.success-mes').text(ans.text).show();
-                        } else {
-                            successBox.hide();
-                            form.find('.error-mes').text(ans.text).show();
-                        }
-                })
+                                if(ans.status === 'OK'){
+                                        errorBox.hide();
+                                        form.find('.success-mes').text(ans.text).show();
+                                } else {
+                                        successBox.hide();
+                                        form.find('.error-mes').text(ans.text).show();
+                                }
+
+                            });
+                    };
+
                 
         };
 
@@ -70,6 +74,8 @@ var myModule = (function (){
     // 2. Проверяет форму
     // 3. Делает запрос на сервер и возвращает ответ с сервера
     var _ajaxForm = function ( form, url) {
+        
+        if (!validation.validateForm(form)) return false;
 
         // if (!valid) return false;
         data = form.serialize();

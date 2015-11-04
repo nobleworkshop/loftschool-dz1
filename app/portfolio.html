@@ -12,6 +12,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.min.css">
     <!-- Css styles -->
     <link rel="stylesheet" href="css/main.css?v=1.1">
 
@@ -167,6 +168,12 @@
 
     <!-- MODAL WINDOW - ADD NEW WORK -->
 
+    <style>
+        .server-mes {
+            display: none;
+        }
+    </style>
+
     <!-- ........................ LOGIN CONTAINER ......................... -->
     <div class="modal_fade"></div>
     <div class="login_container modal_add_work_holder clearfix" id="add_new_project_popup">
@@ -177,19 +184,22 @@
         <a class="close-popup modal_close">Закрыть попап</a>
 
         <form class="form clearfix" id="add_new_project" action="">
+            
+            <div class="server-mes error-mes"></div>
+            <div class="server-mes success-mes"></div>
 
             <label for="project_title">Название проекта
-            <input type="text" id="project_title" name="projectName" placeholder="Введите название">
+            <input type="text" id="project_title" name="projectName" qtip-content="Вы не ввели название" placeholder="Введите название">
             </label>
 
             <label for="project_img">Картинка проекта</label>
-            <input type="file" id="project_img" name="fileurl" placeholder="Загрузите изображение">
+            <input type="file" id="project_img" name="fileurl" qtip-content="Вы не прикрепили картинку" placeholder="Загрузите изображение">
 
             <label for="project_url">URL проекта</label>
-            <input type="text" id="project_url" name="projectUrl" placeholder="Добавьте ссылку">
+            <input type="text" id="project_url" name="projectUrl" qtip-content="Вы не ввели URL проекта" placeholder="Добавьте ссылку">
 
             <label for="project_description">Описание</label>
-            <textarea type="text" id="project_description" name="text" placeholder="Пара слов о Вашем проекте"></textarea>
+            <textarea type="text" id="project_description" name="text" qtip-content="Вы не ввели описание проекта" placeholder="Пара слов о Вашем проекте"></textarea>
 
                 <!-- <label class="login_label"><input type="text" class="login_input" placeholder="Введите Email"></label> -->
                 <!-- <label class="pass_label"><input type="password" class="login_pass" placeholder="Введите пароль"></label> -->
@@ -216,7 +226,9 @@
 	<![endif]-->
     <script src="bower/jquery/dist/jquery.min.js"></script>
     <script src="bower/bPopup/jquery.bpopup.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="bower/qtip2/jquery.qtip.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/add_project.js"></script>
 </body>
 
 </html>

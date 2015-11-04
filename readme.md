@@ -6,7 +6,5 @@
 4. bower i
 5. npm i
 6. npm link gulp browser-sync
+6. npm link gulp-less
 7. gulp
-
-
-

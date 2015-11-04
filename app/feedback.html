@@ -12,6 +12,7 @@
     <meta name="keywords" content="">
     <meta name="description" content="">
     <link rel="stylesheet" href="bower/normalize-css/normalize.css">
+    <link rel="stylesheet" href="bower/qtip2/jquery.qtip.min.css">
     <!-- Css styles -->
     <link rel="stylesheet" href="css/main.css?v=1.1">
 
@@ -104,15 +105,15 @@
             <form id="contactForm" action="" method="post">
                 <div class="form_block name">
                     <label for="name">Имя:</label>
-                    <input type="text" id="name" name="name" placeholder="Как к Вам обращаться">
+                    <input type="text" id="name" name="name" qtip-content="Вы не ввели имя" qtip-position="left" placeholder="Как к Вам обращаться">
                 </div>
                 <div class="form_block email clearfix">
-                    <label for="email">Имя:</label>
-                    <input type="email" id="email" name="email" placeholder="Куда мне писать">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" qtip-content="Вы не ввели email" qtip-position="right" placeholder="Куда мне писать">
                 </div>
                 <div class="form_block message clearfix">
                     <label for="message">Сообщение:</label>
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder="Кратко в чем суть"></textarea>
+                    <textarea name="message" id="message" cols="30" rows="10" qtip-content="Вы не ввели сообщение" placeholder="Кратко в чем суть"></textarea>
                 </div>
                 <div class="form_block captcha clearfix">
                     <label for="captcha">Введите код, указанный на картинке</label>
@@ -121,7 +122,7 @@
                         <div class="captcha_block"><img src="img/capthca_img.png" height="67" width="174" alt="Captcha"></div>
                     </div>
                     <div class="grid50_2">
-                        <input type="text" id="captcha" name="email" class="clearfix" placeholder="Введите код">  
+                        <input type="text" id="captcha" name="email" class="clearfix" qtip-content="Вы не ввели код проверки" qtip-position="right" placeholder="Введите код">  
                     </div>
 
                 </div>
@@ -162,7 +163,10 @@
 	<script src="libs/respond/respond.min.js"></script>
 	<![endif]-->
     <script src="bower/jquery/dist/jquery.min.js"></script>
-    <script src="js/main.js"></script>
+    <script src="bower/qtip2/jquery.qtip.js"></script>
+    <script src="bower/qtip2/jquery.qtip.min.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/feedback.js"></script>
 </body>
 
 </html>

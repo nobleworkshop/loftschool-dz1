@@ -14,7 +14,6 @@
 
 */
 /* MY MIXINS */
-@import "http://webfonts.ru/import/osans.css";
 .cover {
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -273,7 +272,7 @@ body {
   min-width: 980px;
   line-height: 1.4;
   font-size: 14px;
-  font-family: 'Open Sans';
+  font-family: 'Open Sans', Sans Serif;
   cursor: default;
 }
 .page-wrap {
@@ -286,7 +285,7 @@ body {
   background-size: cover;
 }
 a {
-  color: #2778A6;
+  color: #2778a6;
   text-decoration: underline;
   outline: none;
 }
@@ -313,6 +312,10 @@ a {
   -ms-transition: background 0ms;
   -o-transition: background 0ms;
   transition: background 0ms;
+}
+.has-error {
+  border-color: red;
+  background-color: pink;
 }
 .header {
   position: relative;
