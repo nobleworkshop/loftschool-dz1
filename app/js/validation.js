@@ -1,108 +1,117 @@
+// Модуль валидации
+
 var validation = (function () {
 
-	// Initialize module
-	var init = function () {
-		_setUpListeners();
-	};
+  var init = function (){
+    console.log('Инициализация модуля validation ');
+    _setUpListeners();
+  };
 
-	// Listen to doing
-	var _setUpListeners = function () {
-		$('form').on('keydown', '.has-error', _removeError);
-		// $('form').on('reset', _clearForm);
-		$('form input[type="reset"]').on('click', _clearForm);
+  // Прослушивает все события 
+  _setUpListeners = function(){
+    // удаляем красную обводку у элементов форм
+    $('form').on('keydown', '.has-error', _removeError);
+    // при сбросе формы удаляем также: тултипы, обводку, сообщение от сервера
+    $('form').on('reset', _clearForm);
+  };
 
-	};
+  _removeError = function() {
+    console.log('Запуск ф-ии _removeError в validation.js');
+    $(this).removeClass('has-error');
+  };
+  
 
-
-	var _clearForm = function () {
-		console.log('We are inside _clearForm');
-		var form = $(this);
-		form.find('.input, .textarea').trigger('hideTooltip');
-		form.find('.has-error').removeClass('has-error');
-	};
-
-	var _removeError = function () {
-		console.log('We are inside _removeError');
-		$(this).removeClass('has-error');
-	};
-
-	
-
-	// Creates ToolTips
-	var _createQtip = function (element, position) {
-		
-		// tooltip position
-		if (position === 'right') {
-			position = {
-				my: 'left center',
-				at: 'right center'
-			}
-		} else {
-			position = {
-				my: 'right center',
-				at: 'left center',
-				adjust: {
-					method: 'shift none'
-				}
-			}
-		}
+  _clearForm = function(form){
+    console.log('Запуск ф-ии _clearForm в validation.js');
+    var form = $(this);
+    console.log(form);
+    
+    form.find('input, textarea').trigger('hideTooltip'); // удаляем тултипы
+    form.find('.has-error').removeClass('has-error') // удаляем красную подсветку
+    
+    // очищаем и прячем сообщения с сервера
+    form.find('.error-mes, success-mes').text('').hide(); 
+  };
 
 
-		//initialize for tooltip
-		element.qtip({
-			content: {
-				text: function() {
-					return $(this).attr('qtip-content');
-				}
-			},
-			show: {
-				event: 'show'
-			},
-			hide: {
-				event: 'keydown hideTooltip'
-			},
-			position: position,
-			style: {
-				classes: 'qtip-mystyle qtip-rounded',
-				tip: {
-					height: 10,
-					width: 16
-				}
-			}
-		}).trigger('show');
-	};
+  // Проверяет, чтобы все поля формы были не пустыми. Если пустые - вызывает тултипы
+  validateForm = function(form) {
+    console.log('Запуск метода validateForm модуля validation внутри файла validation.js');
+    
+    var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
+      valid = true;
 
-	// Universal function to validate forms
-	var validateForm = function (form) {
-  		console.log('ПРивет!  Я в модуле валидации проверяю форму.');
+    // console.log(elements);
 
-		var elements = form.find('input, textarea').not('input[type="file"], input[type="hidden"]'),
-		valid = true;
+    $.each(elements, function(index, val) {
+      var element = $(val),
+        val = element.val(),
+        pos = element.attr('qtip-position');
 
-		// Go throw all form elements
-		$.each(elements, function(index, val){
-			// console.log(index);
-			// console.log(value);
+      if(val.length === 0){
+        element.addClass('has-error');
+        _createQtip(element, pos);
+        valid = false;
+      };
 
-			var element = $(val),
-				val = element.val(),
-				pos = element.attr('qtip-position');
+    });//each 
 
-			if(val.length === 0){
-				element.addClass('has-error');
-				_createQtip(element, pos);
-				valid = false;
-			}
-		});
-	};
+    // console.log(valid);
 
-	// Return object - Public methods
-	return {
-		init: init,
-		validateForm: validateForm
-	};
+    return valid;
+    console.log('Проверка прошла');
+  };//validateForm
+
+  // Создаёт тултипы
+  _createQtip = function (element, position) {
+    console.log('Запуск функции _createQtip внутри файла validation.js');
+    
+    if (position === 'right') {
+      position = {
+        my: 'left center',
+        at: 'right center',
+
+      }
+    } else {
+      position = {
+        my: 'right center',
+        at: 'left center',
+        adjust: {
+          method: 'shift none'
+        }
+      }
+    }//if
+
+    element.qtip({
+      content: {
+        text: function() {
+          return $(this).attr('qtip-content');
+        }
+      },
+      show: {
+        event: 'show'
+      },
+      hide: {
+        event: 'keydown hideTooltip'
+      },
+      position: position,
+      style: {
+        classes: 'qtip-mystyle qtip-rounded',
+        tip: {
+          height: 10,
+          width: 16
+        }
+      }
+    }).trigger('show');
+  };//_createQtip
 
 
-})();
+  return {
+    init: init,
+    validateForm: validateForm
+  };
+
+
+})();//var validation
 
 validation.init();
