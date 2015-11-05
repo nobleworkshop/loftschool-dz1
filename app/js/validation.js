@@ -15,14 +15,14 @@ var validation = (function () {
 
 
 	var _clearForm = function () {
-		console.log('We aer inside _clearForm');
+		console.log('We are inside _clearForm');
 		var form = $(this);
 		form.find('.input, .textarea').trigger('hideTooltip');
 		form.find('.has-error').removeClass('has-error');
 	};
 
 	var _removeError = function () {
-		console.log('We aer inside _removeError');
+		console.log('We are inside _removeError');
 		$(this).removeClass('has-error');
 	};
 

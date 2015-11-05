@@ -14,6 +14,7 @@
 
 */
 /* MY MIXINS */
+@import "../fonts/opensans/opensans.css";
 .cover {
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -2727,6 +2728,217 @@ body {
   float: right;
   text-indent: -99999px;
   cursor: pointer;
+}
+/*   FILE UPLOAD   */
+.file_upload {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  font-size: 1em;
+  /* example */
+  height: 2em;
+  /* example */
+  line-height: 2em;
+  cursor: pointer;
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+.file_upload .button,
+.file_upload > mark {
+  display: block;
+  cursor: pointer;
+}
+.file_upload .button {
+  float: right;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 8em;
+  /* example */
+  height: 100%;
+  text-align: center;
+}
+.file_upload > mark {
+  background: transparent;
+  /* example */
+  padding-left: 1em;
+  /* example */
+  cursor: pointer;
+  height: 38px;
+  padding-left: 10px;
+  color: #c7c6c6;
+  padding-top: 6px;
+}
+.file_upload > mark.active {
+  color: #555;
+}
+.file_upload input[type=file] {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+/* Making it beautiful */
+.file_upload {
+  background-image: -moz-linear-gradient(90deg, #e9e7e7 0%, rgba(251, 249, 249, 0) 100%);
+  border: 1px solid #d6d5d3;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.004);
+  color: #8a8a8a;
+  display: block;
+  font-size: 12px;
+  padding: 11px 8px 11px 72px;
+  position: relative;
+  width: 100%;
+  height: 40px;
+  padding: 0;
+  cursor: pointer;
+}
+.file_upload .button {
+  top: -1px;
+  right: -1px;
+  position: absolute;
+  cursor: pointer;
+  background-image: url(../img/spritesheet.png);
+  background-repeat: no-repeat;
+  display: block;
+  background-position: -185px -25px;
+  width: 54px;
+  height: 45px;
+}
+.file_upload .button.sprite-_heckbox_on {
+  background-position: -25px -25px;
+  width: 21px;
+  height: 21px;
+}
+.file_upload .button.sprite-bg_email_left {
+  background-position: -96px -25px;
+  width: 39px;
+  height: 38px;
+}
+.file_upload .button.sprite-bg_form_cloud {
+  background-position: -185px -25px;
+  width: 54px;
+  height: 45px;
+}
+.file_upload .button.sprite-bg_phone_left {
+  background-position: -289px -25px;
+  width: 40px;
+  height: 38px;
+}
+.file_upload .button.sprite-bg_skype_left {
+  background-position: -379px -25px;
+  width: 40px;
+  height: 38px;
+}
+.file_upload .button.sprite-case {
+  background-position: -469px -25px;
+  width: 54px;
+  height: 55px;
+}
+.file_upload .button.sprite-checkbox_off {
+  background-position: -573px -25px;
+  width: 21px;
+  height: 21px;
+}
+.file_upload .button.sprite-close_red {
+  background-position: -644px -25px;
+  width: 12px;
+  height: 12px;
+}
+.file_upload .button.sprite-cross_green {
+  background-position: -706px -25px;
+  width: 12px;
+  height: 12px;
+}
+.file_upload .button.sprite-diploma {
+  background-position: -768px -25px;
+  width: 54px;
+  height: 55px;
+}
+.file_upload .button.sprite-graguete {
+  background-position: -872px -25px;
+  width: 54px;
+  height: 55px;
+}
+.file_upload .button.sprite-icon_email_orange {
+  background-position: -976px -25px;
+  width: 16px;
+  height: 12px;
+}
+.file_upload .button.sprite-icon_facebook {
+  background-position: -1042px -25px;
+  width: 38px;
+  height: 40px;
+}
+.file_upload .button.sprite-icon_facebook_on {
+  background-position: -1130px -25px;
+  width: 38px;
+  height: 40px;
+}
+.file_upload .button.sprite-icon_github {
+  background-position: -1218px -25px;
+  width: 38px;
+  height: 40px;
+}
+.file_upload .button.sprite-icon_github_on {
+  background-position: -1306px -25px;
+  width: 38px;
+  height: 40px;
+}
+.file_upload .button.sprite-icon_twitter {
+  background-position: -1394px -25px;
+  width: 38px;
+  height: 40px;
+}
+.file_upload .button.sprite-icon_twitter_on {
+  background-position: -1482px -25px;
+  width: 38px;
+  height: 40px;
+}
+.file_upload .button.sprite-icon_vk {
+  background-position: -1570px -25px;
+  width: 38px;
+  height: 40px;
+}
+.file_upload .button.sprite-icon_vk_on {
+  background-position: -1658px -25px;
+  width: 38px;
+  height: 40px;
+}
+.file_upload .button.sprite-input_email_bg {
+  background-position: -1746px -25px;
+  width: 40px;
+  height: 40px;
+}
+.file_upload .button.sprite-input_pass_bg {
+  background-position: -1836px -25px;
+  width: 40px;
+  height: 40px;
+}
+.file_upload .button.sprite-locked {
+  background-position: -1926px -25px;
+  width: 18px;
+  height: 21px;
+}
+.file_upload .button.sprite-pic {
+  background-position: -1994px -25px;
+  width: 54px;
+  height: 55px;
+}
+.file_upload .button.sprite-school {
+  background-position: -2098px -25px;
+  width: 54px;
+  height: 55px;
+}
+.file_upload .button.sprite-tag_bg {
+  background-position: -2202px -25px;
+  width: 347px;
+  height: 21px;
+}
+.file_upload .button.sprite-unlocked {
+  background-position: -2599px -25px;
+  width: 23px;
+  height: 21px;
 }
 .feedback_form {
   width: 404px;

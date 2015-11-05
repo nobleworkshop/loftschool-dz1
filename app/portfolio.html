@@ -193,7 +193,18 @@
             </label>
 
             <label for="project_img">Картинка проекта</label>
-            <input type="file" id="project_img" name="fileurl" qtip-content="Вы не прикрепили картинку" placeholder="Загрузите изображение">
+            <label class="file_upload">
+                <span class="button"></span>
+                <mark>Загрузите изображение</mark>
+                <input type="file" id="project_img" name="fileurl" qtip-content="Вы не прикрепили картинку" placeholder="Загрузите изображение">
+            </label>
+
+
+
+
+
+
+
 
             <label for="project_url">URL проекта</label>
             <input type="text" id="project_url" name="projectUrl" qtip-content="Вы не ввели URL проекта" placeholder="Добавьте ссылку">
@@ -229,6 +240,47 @@
     <script src="bower/qtip2/jquery.qtip.js"></script>
     <script src="js/validation.js"></script>
     <script src="js/add_project.js"></script>
+
+    <script>
+    $(function(){
+        var wrapper = $( ".file_upload" ),
+            inp = wrapper.find( "input" ),
+            btn = wrapper.find( ".button" ),
+            lbl = wrapper.find( "mark" );
+
+        // Crutches for the :focus style:
+        inp.focus(function(){
+            wrapper.addClass( "focus" );
+        }).blur(function(){
+            wrapper.removeClass( "focus" );
+        });
+
+        var file_api = ( window.File && window.FileReader && window.FileList && window.Blob ) ? true : false;
+
+        inp.change(function(){
+            var file_name;
+            if( file_api && inp[ 0 ].files[ 0 ] )
+                file_name = inp[ 0 ].files[ 0 ].name;
+            else
+                file_name = inp.val().replace( "C:\\fakepath\\", '' );
+
+            if( ! file_name.length )
+                return;
+
+            if( lbl.is( ":visible" ) ){
+                lbl.text( file_name );
+                btn.text( "" );
+                lbl.addClass('active');
+            }else
+                btn.text( file_name );
+        }).change();
+
+    });
+    $( window ).resize(function(){
+        $( ".file_upload input" ).triggerHandler( "change" );
+    });
+    </script>
+
 </body>
 
 </html>

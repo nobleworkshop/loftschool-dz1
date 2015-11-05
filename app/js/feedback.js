@@ -8,11 +8,11 @@ var contactMe = (function () {
 
 	// Прослушивает события 
 	function _setUpListners () {
-		$('#contactForm').on('click', _submitForm);	
+		$('#contactForm input[type="submit"]').on('click', _submitForm);	
 	};
 
   	var _submitForm = function(e){
-  		console.log('Sending form');
+  		console.log('_submitForm');
   		e.preventDefault();
 
   		var form = $(this),
